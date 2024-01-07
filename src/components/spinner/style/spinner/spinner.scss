@@ -1,0 +1,61 @@
+.spinner {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 12px;
+  line-height: 1em;
+
+  padding: 10px 0;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+  //background-color: #213547;
+
+
+  &__input {
+    margin-top: 100px;
+  }
+}
+
+.spinner__wrapper {
+  display: flex;
+
+  align-items: center;
+
+  position: relative;
+  color: yellow;
+
+  height: 120%;
+
+  &::after {
+    --fadeOffssetY: -0.3em;
+    --fadeOffsetX: 0em;
+
+    content: "";
+    display: block;
+    position: absolute;
+    top: var(--fadeOffssetY);
+    left: var(--fadeOffsetX);
+    right: var(--fadeOffsetX);
+    bottom: var(--fadeOffssetY);
+    background: linear-gradient(
+                    0deg,
+                    rgba(0,0,0,1) 0%,
+                    rgba(0,0,0, 0.8) 5%,
+                    rgba(0,0,0,0.3) 25%,
+                    rgba(0,0,0,0) 35%,
+                    rgba(0,0,0,0) 60%,
+                    rgba(0,0,0,0.3) 75%,
+                    rgba(0,0,0,0.8) 95%,
+                    rgba(0,0,0,1) 100%);
+
+    //background-color: hsla(0, 20%, 20%, 0.6);
+    //filter: blur(0.2em);
+  }
+
+  //overflow: hidden;
+
+}
